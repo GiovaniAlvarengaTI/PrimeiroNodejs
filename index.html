@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Doe Vida!</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <header>
+
+            <img class="logo" src="logo.png" alt="DOE">
+            <h2>A sua doação importa!</h2>
+
+            <p>Até 3 vidas são ajudadas com apenas uma doação...</p>
+            <p>Mais de 38 mil doações são necessárias todos os dias!</p>
+            <p>Apenas 1,9% da população brasileira doa sangue.</p>
+
+            <button>Ajude agora mesmo!</button>
+
+        </header>
+        <section class="form hide">
+            <h2>Comece a ajudar agora mesmo!</h2>
+            <form action="/" method="POST">
+                
+                <input type="text" name="name" placeholder="Nome Completo">
+                <input type="text" name="email" placeholder="E-Mail">
+                <input type="text" name="blood" placeholder="Tipo Sanguíneo">
+                
+                <button>Cadastrar-se</button>
+            </form>
+        </section>
+        <main>
+
+            <h2>Últimos <spam>doadores</spam></h2>
+            <section class="donors">
+                <!--Estrutura do JS no HTML-->
+                {% for donors in donors %}
+                    <div class="donor">
+                        <div class="blood">{{donors.blood}}</div>
+                        <p>{{donors.name}}</p>
+                    </div>
+                {% endfor %}
+            </section>
+
+        </main>
+        <footer>
+            Giovani Alvarenga | 2020
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

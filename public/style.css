@@ -1,0 +1,171 @@
+/*Global*/
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin:0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+
+    font-family: 'Lato', sans-serif;
+
+    background-color: #f9f9f3;
+}
+/*Títulos*/
+
+header h1, main h2{
+    margin-bottom: 70px;
+}
+
+.form h2{
+    text-align: right;
+    color: #f9f9f3;
+}
+
+main h2 spam{
+    color: #ff4f4f;
+}
+
+.logo{
+    width:150px;
+    margin:45px 0;
+}
+
+/*Estrutura: alinhamento, espaçamento, etc.*/
+
+header{
+    text-align: center;
+
+    width:90%;
+    max-width: 500px;
+
+    margin:0 auto 70px auto;
+}
+
+header button{
+    margin-top: 16px;
+    padding: 8px 16px;  
+    border-radius: 4px;
+    border: none;
+
+    background-color: #ff4f4f;
+    color: white;
+
+    font-weight: bold;
+}
+
+main{
+    text-align: center;
+    width:90%;
+    max-width: 500px;
+    margin:0 auto 70px auto;
+}
+
+footer{
+    text-align: center;
+    margin-top: auto;
+
+    padding: 16px;
+
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+}
+
+/*Sections*/
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    align-items: center;
+
+
+    width:90%;
+    max-width: 500px;
+    margin:0 auto 70px auto;
+
+    border-radius: 5px;
+    background-color: #ff4f4f;
+    
+    padding: 16px 64px;
+}
+
+form input, form button{
+    width:100%;
+    margin-bottom: 4px;
+
+
+    padding: 8px 16px 8px 16px;
+
+    border-radius: 4px;
+    border:1px white solid;
+
+}
+
+form input{
+    background-color:#f9f9f3;
+}
+
+form button{
+    background-color:transparent;
+    color: #f9f9f3;
+    font-weight: bold;
+}
+
+
+.donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.donor p{
+    margin: 24px 0 40px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.blood{
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.blood::before{
+    content:"";
+    background-color:#ff4f4f11;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-45deg);
+}
+
+/*Função js*/
+
+section.form{
+    transition: all 400ms;
+}
+
+section.form.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top:-70px;
+}
